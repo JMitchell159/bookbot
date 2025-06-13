@@ -12,4 +12,12 @@ def num_char(text):
             counts[symbol] = 1
     
     return counts
+
+def num_char_sorted(text):
+    dict_list = []
+    chars = num_char(text)
+
+    for key in chars:
+        dict_list.append({"char": key, "num": chars[key]})
     
+    return sorted(dict_list, reverse=True, key=lambda x: x['num'])
